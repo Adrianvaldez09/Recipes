@@ -1,13 +1,324 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
 }
+html{
+  overflow-x: hidden;
+}
+.header{
+  width: 100%;
+  background-color: whitesmoke;
+  height: 100px;
+}
+
+.header-container{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+
+}
+
+.logo{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 2.5rem;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.7s ease-in-out;
+  position: absolute;
+  right: 50px;
+}
+
+.nav-items{
+  width: 20rem;
+  margin-right: 20px;
+}
+
+.nav-items ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-items ul li{
+  text-decoration: none;
+}
+
+.nav-items ul li a{
+  text-decoration: none;
+}
+
+.header-form form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-form form input{
+  display: inline-block;
+  padding: 5px 10px;
+}
+.header-form form button{
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.active{
+  background-color: red;
+}
+
+.hamburger{
+  position: absolute;
+  right: -1000px;
+  visibility: hidden;
+}
+
+@media screen and (max-width:1100px) {
+
+
+  .nav-container{
+  position: absolute;
+  right: -1000px;
+  transition: 1s ease-in-out;
+  visibility: hidden;
+  }
+
+  .nav-items{
+    height: 70%;
+  }
+  .nav-items2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .header{
+    transition: 0.6s ease-in-out;
+  }
+  .activeHeader{
+    height: 350px;
+  }
+  .menu{
+    right: 0;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    visibility: visible;
+  }
+  .hamburger{
+    position: absolute;
+    right: 50px;
+    font-size: 1.5rem;
+    top: 50px;
+    transition: 1s ease-in-out;
+    visibility: visible;
+  }
+
+  .close{
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+    width: 100%;
+    transition: 0.4s ease-in-out;
+  }
+  .close2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: 1s ease-in-out;
+  }
+  
+}
+
+/* ! Search Section */
+.search-section{
+  width: 100%;
+  height: 1000px;
+  background-color: aqua;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image:linear-gradient(to bottom, rgba(29, 29, 29, 0.15) 10%,
+    rgb(8, 1, 1,0.9)),  url("./images/search-section.jpeg");
+}
+.search-section-container{
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-section-container h2{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: rgb(241, 241, 241);
+  text-shadow: 2px 2px  black;
+  text-align: center;
+}
+
+.search-section-container h3{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: rgb(241, 241, 241);
+  text-shadow: 2px 2px  black;
+  text-align: center;
+}
+
+.search-section-container form input{
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 10px;
+  border: none;
+}
+.search-section-container form button{
+  display: inline-block;
+  padding: 15px 25px;
+}
+
+
+
+/* ?Cuisine Section */
+.cuisine-section{
+  width: 100%;
+  height: 1000px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  
+}
+
+.cuisine-background{
+  background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: center;
+    background-image:url("./images/cuisine-section.jpeg");
+    width: 50%;
+    height: 100%;
+}
+
+
+.cuisine-section-container {
+  width: 50%;
+  height: 60%;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.animated-text{
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(-45deg, blue, red);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: move 5s ease-in-out infinite;
+}
+
+@media screen and (max-width:500px) {
+  .cuisine-section{
+    height: 500px;
+
+    background-image: none
+  }
+  .animated-text{
+    font-size: 1rem;
+  }
+  .cuisine-section-container{
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/cuisine-section.jpeg");
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+
+@keyframes move {
+  0% {background-position: 0 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0 50%;}
+}
+
+
+/* !CUISINE PAGE RESULTS */
+
+.cuisine-page{
+  display: flex;
+}
+
+.cuisine-page ul{
+  width: 15%;
+}
+.cuisine-page ul li {
+  width: 100%;
+}
+.cuisine-page ul li button{
+  width: 100%;
+}
+
+.cuisine-right{
+  width: 85%;
+}
+
+.cuisine-page-results{
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-align: center;
+}
+
+.cuisine-page-results div{
+  width: 350px;
+  margin: 0 auto;
+}
+
+.chosen-cuisine{
+  background-color: red;
+}
+
+
+/* !MEAL PLANNER */
+.meal-container{
+  height: 1000px;
+}
+
