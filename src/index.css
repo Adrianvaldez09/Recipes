@@ -97,6 +97,8 @@ html{
   right: -1000px;
   transition: 1s ease-in-out;
   visibility: hidden;
+  display: none;
+  
   }
 
   .nav-items{
